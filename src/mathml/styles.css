@@ -1,0 +1,27 @@
+.small {
+    font-size: 70%;
+}
+
+.menv-right-align .menv-align-row:nth-child(odd) {
+    text-align: right;
+    text-align: -webkit-right;
+    text-align: -moz-right
+}
+
+.menv-left-align .menv-align-row:nth-child(even) {
+    text-align: left;
+}
+
+.menv-left-border {
+    border-left: 0.06em solid;
+    border-collapse: collapse;
+}
+
+.menv-right-border {
+    border-right: 0.06em solid;
+    border-collapse: collapse;
+}
+
+.negated {
+    background: linear-gradient(to top left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) calc(50% - 0.8px), rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) calc(50% + 0.8px), rgba(0, 0, 0, 0) 100%)
+}

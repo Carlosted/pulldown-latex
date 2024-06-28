@@ -1,4 +1,4 @@
-use crate::attribute::{Dimension, DimensionUnit, Glue};
+use crate::{attribute::{Dimension, DimensionUnit, Glue}, event::DelimiterType};
 
 use super::{
     tables::token_to_delim, Argument, CharToken, ErrorKind, InnerResult, Token,
@@ -85,10 +85,10 @@ pub fn group_content<'a>(input: &mut &'a str, start: &str, end: &str) -> InnerRe
 }
 
 /// Converts a control sequence or character into its corresponding delimiter unicode
-/// character.
+/// character, and whether or not the delimiter is an opening.
 ///
 /// Current delimiters supported are listed in TeXBook p. 146, and on https://temml.org/docs/en/supported ("delimiter" section).
-pub fn delimiter(input: &mut &str) -> InnerResult<char> {
+pub fn delimiter(input: &mut &str) -> InnerResult<(char, DelimiterType)> {
     let maybe_delim = token(input)?;
     token_to_delim(maybe_delim).ok_or(ErrorKind::Delimiter)
 }

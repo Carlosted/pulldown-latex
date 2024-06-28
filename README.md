@@ -30,6 +30,7 @@ these links specifically.
 - [Unicode-math package page](https://ctan.org/pkg/unicode-math)
 - [Font tester](https://fred-wang.github.io/MathFonts/)
 - [Math Variant Selection](https://milde.users.sourceforge.net/LUCR/Math/math-font-selection.xhtml#math-styles)
+- [Official Latex Unicode Data](https://github.com/latex3/unicode-data)
 
 ### To Test
 - [ ] All the things temml and katex test
